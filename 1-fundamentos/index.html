@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase Alpha - Code test</title>
+
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script type="module" src="./index.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Clase Alpha - Coding test</h1>
+    <div class="container">
+      
+      <div class="table">
+        <div class="table-header">
+          <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">#</a></div>
+          <div class="header__item"><a id="name" class="filter__link" href="#">Nombre</a></div>
+          <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Puntaje</a></div>
+          <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Código</a></div>
+        </div>
+        <div class="table-content" id="rows-container">
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- ROW TEMPLATE -->
+<template id="row-template">
+  <div class="table-row">
+    <div class="table-data number"></div>
+    <div class="table-data name"></div>
+    <div class="table-data score"></div>
+    <div class="table-data code"></div>
+  </div>
+</template>
+<!-- ROW TEMPLATE -->
+
+</body>
+</html>
