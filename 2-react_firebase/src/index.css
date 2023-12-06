@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+:root {
+  --base-spacing-unit: 24px;
+  --base-spacing-unit: 24px;
+  --half-spacing-unit: var(--base-spacing-unit) / 2;
+
+  --color-alpha: #1772FF;
+  --color-form-highlight: #EEEEEE;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: var(--base-spacing-unit);
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid var(--color-form-highlight);
+}
+
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #000;
+  padding: (var(--half-spacing-unit) * 1.5) 0;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: (var(--half-spacing-unit) * 1.5) 0;
+}
+
+.table-row:nth-of-type(odd) {
+  background: var(--color-form-highlight);
+}
+
+.table-data,
+.header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.header__item {
+  text-transform: uppercase;
+}
+
+.filter__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-left: var(--base-spacing-unit);
+  padding-right: var(--base-spacing-unit);
+}
+
+.filter__link::after {
+  content: '';
+  position: absolute;
+  right: -(var(--half-spacing-unit) * 1.5);
+  color: white;
+  font-size: var(--half-spacing-unit);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter__link.desc::after {
+  content: '(desc)';
+}
+
+.filter__link.asc::after {
+  content: '(asc)';
+}

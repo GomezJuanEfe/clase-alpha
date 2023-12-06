@@ -14,7 +14,6 @@ fetch('./data.txt')
   .then(data => {
     userData = strToArr(data);
     userData.forEach(({ number, name, score, code }) => {
-      console.log(number, name)
       rowTemplate({ number, name, score, code });
     });
   })
